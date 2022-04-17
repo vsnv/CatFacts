@@ -2,4 +2,4 @@
 Clean Modular Domain Driven Architecture Example
 
 # Graph
-![graph](graph.jpg)
+![graph](graph.png)
