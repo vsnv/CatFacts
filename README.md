@@ -1,7 +1,12 @@
 ![graph](Targets/CatFactsApp/Resources/Media.xcassets/AppIcon.appiconset/180.png)
 
 # CatFacts
-- Clean Modular Unidirectional Domain Driven Architecture Example
+An example of an app architecture with concepts:
+- Modular 
+- Unidirectional 
+- Domain Driven 
+- with Data-Driven UI
+- automated by Tuist
 
 # Contents
 ## Tuist
