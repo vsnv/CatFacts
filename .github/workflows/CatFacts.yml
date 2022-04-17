@@ -28,5 +28,5 @@ jobs:
       with:
         workspace: CatFacts.xcworkspace
         scheme: CatFactsApp
-        destination: "{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }"
+        destination: 'platform=iOS Simulator,name=iPhone 12,OS=15.0'
 
