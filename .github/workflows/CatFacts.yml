@@ -26,5 +26,5 @@ jobs:
       # uses: devbotsxyz/xcode-test@8f7f94ea653de78092a24ccc5cf6e3da59268d83
       uses: devbotsxyz/xcode-test@v1.1.0
       with:
-        # Workspace
         workspace: CatFacts.xcworkspace
+        scheme: CatFactsApp
