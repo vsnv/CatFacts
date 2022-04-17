@@ -28,3 +28,5 @@ jobs:
       with:
         workspace: CatFacts.xcworkspace
         scheme: CatFactsApp
+        destination: "platform=iOS Simulator,id=#{@udid}"
+
