@@ -28,6 +28,6 @@ jobs:
       with:
         workspace: CatFacts.xcworkspace
         scheme: CatFactsApp
-        destination: '{ id=EAA7E727-5ACF-44A7-8C73-8F2D51BB389C }'
+        destination:  "id=AA3DEA0D-20A4-45C7-8CF3-82A1A7D7E4BC"
         
 
