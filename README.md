@@ -20,3 +20,7 @@ A root node of a modular tree, combining other modules and passing inputs and ou
 
 # Graph
 ![graph](graph.png)
+
+# Bootstrap
+This is a Tuist-driven App, so read https://docs.tuist.io/ first.
+To generate .xcproject and .xcrowkspace files use $ tuist generate
