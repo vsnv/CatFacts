@@ -1,4 +1,5 @@
-![graph](Targets/CatFactsApp/Resources/Media.xcassets/AppIcon.appiconset/180.png)
+![cat](Targets/CatFactsApp/Resources/Media.xcassets/AppIcon.appiconset/180.png)\
+[![Tuist badge](https://img.shields.io/badge/Powered%20by-Tuist-blue)](https://tuist.io)
 
 # CatFacts
 An example of an app architecture with concepts such as:
