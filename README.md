@@ -1,3 +1,5 @@
+![graph](Targets/CatFactsApp/Resources/Media.xcassets/AppIcon.appiconset/1024.png)
+
 # CatFacts
 Clean Modular Domain Driven Architecture Example
 
