@@ -109,8 +109,8 @@ public enum Module: String, CaseIterable {
 			platform: platform,
 			product: .unitTests,
 			bundleId: "\(bundleIDPrefix).\(name)Tests",
-			infoPlist: .default,
 			deploymentTarget: deploymentTarget,
+			infoPlist: .default,
 			sources: ["Targets/\(name)/Tests/**"],
 			dependencies: [
 				.target(name: "\(name)")
