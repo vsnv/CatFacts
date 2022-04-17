@@ -1,7 +1,7 @@
 ![graph](Targets/CatFactsApp/Resources/Media.xcassets/AppIcon.appiconset/180.png)
 
 # CatFacts
-An example of an app architecture with concepts:
+An example of an app architecture with concepts such as:
 - Modular 
 - Unidirectional 
 - Domain Driven 
