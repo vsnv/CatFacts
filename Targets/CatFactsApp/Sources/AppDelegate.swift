@@ -1,13 +1,13 @@
 //
 //  App.swift
-//  CatFactApp
+//  CatFactsApp
 //
 //  Created by Vasnev Anton Mikhaylovich on 17.04.2022.
-//  Copyright © 2022 CatFact.io. All rights reserved.
+//  Copyright © 2022 CatFacts.io. All rights reserved.
 //
 
 import UIKit
-import CatFactUI
+import CatFactsUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		window = UIWindow(frame: UIScreen.main.bounds)
 
-		let rootViewController = ExampleTableViewController()
+		let rootViewController = CatFactssTableViewController()
 		window?.rootViewController = rootViewController
 		window?.makeKeyAndVisible()
 

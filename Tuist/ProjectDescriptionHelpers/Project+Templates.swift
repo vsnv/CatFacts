@@ -1,10 +1,10 @@
 import ProjectDescription
 
 public enum Module: String, CaseIterable {
-	case CatFactApp
-	case CatFactDomain
-	case CatFactUI
-	case CatFactNetworkService
+	case CatFactsApp
+	case CatFactsDomain
+	case CatFactsUI
+	case CatFactsNetworkService
 
 	var name: String { rawValue }
 
@@ -14,30 +14,30 @@ public enum Module: String, CaseIterable {
 
 	var internalDependencies: [Module] {
 		switch self {
-		case .CatFactApp:
+		case .CatFactsApp:
 			return [
-				.CatFactDomain,
-				.CatFactUI,
-				.CatFactNetworkService
+				.CatFactsDomain,
+				.CatFactsUI,
+				.CatFactsNetworkService
 			]
-		case .CatFactDomain, .CatFactUI, .CatFactNetworkService:
+		case .CatFactsDomain, .CatFactsUI, .CatFactsNetworkService:
 			return []
 		}
 	}
 
 	var targets: [Target] {
 		switch self {
-		case .CatFactApp:
+		case .CatFactsApp:
 			return makeAppTargets(
 				name: name,
 				platform: platform,
 				dependencies: [
-					.target(name: Module.CatFactDomain.name),
-					.target(name: Module.CatFactUI.name),
-					.target(name: Module.CatFactNetworkService.name),
+					.target(name: Module.CatFactsDomain.name),
+					.target(name: Module.CatFactsUI.name),
+					.target(name: Module.CatFactsNetworkService.name),
 				]
 			)
-		case .CatFactDomain, .CatFactUI, .CatFactNetworkService:
+		case .CatFactsDomain, .CatFactsUI, .CatFactsNetworkService:
 			return makeFrameworkTargets(
 				name: name,
 				platform: platform

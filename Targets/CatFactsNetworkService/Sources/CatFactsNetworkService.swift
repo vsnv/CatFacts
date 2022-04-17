@@ -1,15 +1,15 @@
 //
-//  CatFactNetworkService.swift
-//  CatFactNetworkService
+//  CatFactsNetworkService.swift
+//  CatFactsNetworkService
 //
 //  Created by Vasnev Anton Mikhaylovich on 17.04.2022.
-//  Copyright © 2022 CatFact.io. All rights reserved.
+//  Copyright © 2022 CatFacts.io. All rights reserved.
 //
 
 import Foundation
 
 /// Implementation of Cat Fact Network Service
-public final class CatFactNetworkService {
+public final class CatFactsNetworkService {
 
 	// MARK: - Constants
 
@@ -19,14 +19,14 @@ public final class CatFactNetworkService {
 
 	// MARK: - Init
 
-	/// Initialize CatFactNetworking Service
+	/// Initialize CatFactsNetworking Service
 	public init() {}
 
 	// MARK: - Public Methods
 
-	/// Get Cat Fact from CatFact API
+	/// Get Cat Fact from CatFacts API
 	/// - Parameter completion: completion with result of API request
-	public func getFact(completion: @escaping (Result<CatFactNetworkResponse, CatFactNetworkError>) -> Void) {
+	public func getFact(completion: @escaping (Result<CatFactsNetworkResponse, CatFactsNetworkError>) -> Void) {
 		guard let url = URL(string: "\(Constants.host)/fact") else {
 			completion(.failure(.failedToMakeRequestURL))
 			return
@@ -39,7 +39,7 @@ public final class CatFactNetworkService {
 			}
 			if let data = data {
 				do {
-					let catFactResponse = try JSONDecoder().decode(CatFactNetworkResponse.self, from: data)
+					let catFactResponse = try JSONDecoder().decode(CatFactsNetworkResponse.self, from: data)
 					completion(.success(catFactResponse))
 				} catch let decodeError {
 					completion(.failure(.failedToDecode(underlyingError: decodeError)))

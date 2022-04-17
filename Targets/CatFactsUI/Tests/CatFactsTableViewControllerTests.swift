@@ -1,18 +1,18 @@
 //
-//  CatFactsTableViewControllerTests.swift
-//  CatFactsTableViewControllerTests
+//  CatFactssTableViewControllerTests.swift
+//  CatFactssTableViewControllerTests
 //
 //  Created by Vasnev Anton Mikhaylovich on 17.04.2022.
-//  Copyright © 2022 CatFact.io. All rights reserved.
+//  Copyright © 2022 CatFacts.io. All rights reserved.
 //
 
 import XCTest
-import CatFactUI
+import CatFactsUI
 
-class CatFactsTableViewControllerTests: XCTestCase {
+class CatFactssTableViewControllerTests: XCTestCase {
 
 	func test_render() throws {
-		let sut = CatFactsTableViewController()
+		let sut = CatFactssTableViewController()
 		sut.render(props: .init(
 			title: "TestTitle",
 			cells: [

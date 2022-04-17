@@ -1,15 +1,15 @@
 //
 //  Dependencies.swift
-//  CatFactApp
+//  CatFactsApp
 //
 //  Created by Vasnev Anton Mikhaylovich on 17.04.2022.
-//  Copyright © 2022 CatFact.io. All rights reserved.
+//  Copyright © 2022 CatFacts.io. All rights reserved.
 //
 
-import CatFactNetworkService
+import CatFactsNetworkService
 import UIKit
 
 struct Dependencies {
-	let catFactNetworking = CatFactNetworkService()
+	let catFactsNetworkService = CatFactsNetworkService()
 	var rootViewController: UIViewController?
 }

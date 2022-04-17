@@ -1,15 +1,15 @@
 //
-//  CatFactDomain.swift
-//  CatFactDomain
+//  CatFactsDomain.swift
+//  CatFactsDomain
 //
 //  Created by Vasnev Anton Mikhaylovich on 17.04.2022.
-//  Copyright © 2022 CatFact.io. All rights reserved.
+//  Copyright © 2022 CatFacts.io. All rights reserved.
 //
 
 import Foundation
 
-/// Bounded context with CatFact Buisiness Logic
-public enum CatFactDomain {
+/// Bounded context with CatFacts Buisiness Logic
+public enum CatFactsDomain {
 
 	// MARK: Type System
 
@@ -28,14 +28,14 @@ public enum CatFactDomain {
 
 	public enum Input {
 		case catFactDemand
-		case apiRespondedWithCatFact(CatFact)
+		case networkRespondedWithCatFact(CatFact)
 	}
 
 	// MARK: Output
 
 	public enum Output {
-		case confirmMoreCatFactsDemand
-		case requestCatFactFromNetwork
+		case confirmMoreCatFactssDemand
+		case requestCatFactsFromNetwork
 	}
 
 	// MARK: Update
@@ -43,10 +43,10 @@ public enum CatFactDomain {
 	public static func update(_ state: inout State, with input: Input) -> [Output] {
 		switch input {
 		case .catFactDemand:
-			return [.requestCatFactFromNetwork]
-		case .apiRespondedWithCatFact(let newCatFact):
+			return [.requestCatFactsFromNetwork]
+		case .networkRespondedWithCatFact(let newCatFact):
 			state.catFacts.append(newCatFact)
-			return [.confirmMoreCatFactsDemand]
+			return [.confirmMoreCatFactssDemand]
 		}
 	}
 }
