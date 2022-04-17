@@ -17,6 +17,8 @@ public enum Module: String, CaseIterable {
 
 	var platform: Platform { .iOS }
 
+	var deploymentTarget: DeploymentTarget { .iOS(targetVersion: "12.0", devices: .iphone) }
+
 	var bundleIDPrefix: String { "io.CatFacts" }
 
 	var internalDependencies: [Module] {
@@ -56,22 +58,28 @@ public enum Module: String, CaseIterable {
 
 	/// Helper function to create a framework target and an associated unit test target
 	private func makeFrameworkTargets(name: String, platform: Platform) -> [Target] {
-		let sources = Target(name: name,
-												 platform: platform,
-												 product: .framework,
-												 bundleId: "\(bundleIDPrefix).\(name)",
-												 infoPlist: .default,
-												 sources: ["Targets/\(name)/Sources/**"],
-												 resources: [],
-												 dependencies: [])
-		let tests = Target(name: "\(name)Tests",
-											 platform: platform,
-											 product: .unitTests,
-											 bundleId: "\(bundleIDPrefix).\(name)Tests",
-											 infoPlist: .default,
-											 sources: ["Targets/\(name)/Tests/**"],
-											 resources: [],
-											 dependencies: [.target(name: name)])
+		let sources = Target(
+			name: name,
+			platform: platform,
+			product: .framework,
+			bundleId: "\(bundleIDPrefix).\(name)",
+			deploymentTarget: deploymentTarget,
+			infoPlist: .default,
+			sources: ["Targets/\(name)/Sources/**"],
+			resources: [],
+			dependencies: []
+		)
+		let tests = Target(
+			name: "\(name)Tests",
+			platform: platform,
+			product: .unitTests,
+			bundleId: "\(bundleIDPrefix).\(name)Tests",
+			deploymentTarget: deploymentTarget,
+			infoPlist: .default,
+			sources: ["Targets/\(name)/Tests/**"],
+			resources: [],
+			dependencies: [.target(name: name)]
+		)
 		return [sources, tests]
 	}
 
@@ -89,6 +97,7 @@ public enum Module: String, CaseIterable {
 			platform: platform,
 			product: .app,
 			bundleId: "\(bundleIDPrefix).\(name)",
+			deploymentTarget: deploymentTarget,
 			infoPlist: .extendingDefault(with: infoPlist),
 			sources: ["Targets/\(name)/Sources/**"],
 			resources: ["Targets/\(name)/Resources/**"],
@@ -101,6 +110,7 @@ public enum Module: String, CaseIterable {
 			product: .unitTests,
 			bundleId: "\(bundleIDPrefix).\(name)Tests",
 			infoPlist: .default,
+			deploymentTarget: deploymentTarget,
 			sources: ["Targets/\(name)/Tests/**"],
 			dependencies: [
 				.target(name: "\(name)")
