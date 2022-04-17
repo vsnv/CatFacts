@@ -28,6 +28,6 @@ jobs:
       with:
         workspace: CatFacts.xcworkspace
         scheme: CatFactsApp
-        destination: '{ platform:iOS Simulator, id:EAA7E727-5ACF-44A7-8C73-8F2D51BB389C, OS:15.2, name:iPhone 12 Pro Max }'
+        destination: '{ id=EAA7E727-5ACF-44A7-8C73-8F2D51BB389C }'
         
 
